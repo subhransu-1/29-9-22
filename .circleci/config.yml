@@ -7,17 +7,17 @@ jobs:
     steps:
       - checkout
       - terraform/init:
-          path: .
+          path: main.tf
       - terraform/validate:
-          path: .
+          path: main.tf
       - terraform/fmt:
-          path: .
+          path: main.tf
       - terraform/plan:
-          path: .
+          path: main.tf
       - terraform/apply:
-          path: .
+          path: main.tf
       - terraform/destroy:
-          path: .
+          path: main.tf
     working_directory: ~/src
 workflows:
   single-job-lifecycle:
